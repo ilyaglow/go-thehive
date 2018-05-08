@@ -28,20 +28,31 @@ type Entity struct {
 // Case represents TheHive Case
 type Case struct {
 	Entity
-	ArtifactCount        int      `json:"artifactCount"`
-	EndDate              int64    `json:"endDate,omitempty"`
-	ID                   string   `json:"id"`
-	IOCCount             int      `json:"iocCount"`
-	ResolutionStatus     string   `json:"resolutionStatus,omitempty"`
-	Severity             int      `json:"severity"`
-	SimilarArtifactCount int      `json:"similarArtifactCount"`
-	SimilarIocCount      int      `json:"similarIocCount"`
-	StartDate            int64    `json:"startDate"`
-	Status               string   `json:"status"`
-	Tags                 []string `json:"tags"`
-	CaseID               int      `json:"caseId"`
-	Title                string   `json:"title"`
-	TLP                  int      `json:"tlp"`
+	ArtifactCount        int                    `json:"artifactCount"`
+	CaseID               int                    `json:"caseId"`
+	CreatedAt            int64                  `json:"createdAt"`
+	CreatedBy            string                 `json:"createdBy"`
+	CustomFields         interface{}            `json:"customFields"`
+	Description          string                 `json:"description"`
+	EndDate              int64                  `json:"endDate,omitempty"`
+	Flag                 bool                   `json:"flag"`
+	ID                   string                 `json:"id"`
+	IOCCount             int                    `json:"iocCount"`
+	ImpactStatus         string                 `json:"impactStatus,omitempty"`
+	Metrics              map[string]interface{} `json:"metrics"`
+	Owner                string                 `json:"owner"`
+	ResolutionStatus     string                 `json:"resolutionStatus,omitempty"`
+	Severity             int                    `json:"severity"`
+	SimilarArtifactCount int                    `json:"similarArtifactCount,omitempty"`
+	SimilarIocCount      int                    `json:"similarIocCount,omitempty"`
+	StartDate            int64                  `json:"startDate"`
+	Status               string                 `json:"status"`
+	Summary              string                 `json:"summary,omitempty"`
+	TLP                  int                    `json:"tlp"`
+	Tags                 []string               `json:"tags"`
+	Title                string                 `json:"title"`
+	UpdatedAt            int64                  `json:"updatedAt"`
+	UpdatedBy            string                 `json:"updatedBy"`
 }
 
 // SendableCase represents a case to import in TheHive
