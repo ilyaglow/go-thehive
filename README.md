@@ -3,7 +3,7 @@ go-hive
 
 [TheHive](https://github.com/TheHive-Project/TheHive) client library in Go
 
-It's [early days](#1) of the library state, so use on your own risk.
+It's [early days](https://github.com/ilyaglow/go-hive/issues/1) of the library, so use on your own risk.
 
 ## Install
 
