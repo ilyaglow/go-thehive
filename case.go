@@ -25,6 +25,12 @@ type Entity struct {
 	Type string `json:"_type"`
 }
 
+// CustomField is a custom field in the case
+type CustomField struct {
+	String string `json:"string,omitempty"`
+	Order  int    `json:"int"`
+}
+
 // Case represents TheHive Case
 type Case struct {
 	Entity
@@ -32,7 +38,7 @@ type Case struct {
 	CaseID               int                    `json:"caseId"`
 	CreatedAt            int64                  `json:"createdAt"`
 	CreatedBy            string                 `json:"createdBy"`
-	CustomFields         interface{}            `json:"customFields"`
+	CustomFields         map[string]CustomField `json:"customFields"`
 	Description          string                 `json:"description"`
 	EndDate              int64                  `json:"endDate,omitempty"`
 	Flag                 bool                   `json:"flag"`
