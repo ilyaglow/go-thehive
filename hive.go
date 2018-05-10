@@ -14,8 +14,10 @@ import (
 
 const (
 	libraryVersion = "0.1.0"
+
 	// APIRoute represents a prefix path
-	APIRoute  = "api"
+	APIRoute = "api"
+
 	userAgent = "go-thehive/" + libraryVersion
 	mediaType = "application/json"
 )
